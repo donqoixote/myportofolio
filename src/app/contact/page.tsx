@@ -19,7 +19,7 @@ export default function Contact() {
           <p>
             Email:{" "}
             <a href="mailto:emailanda@example.com" className="text-cyan-400">
-              emailanda@example.com
+              portgasace1950@gmail.com
             </a>
           </p>
 
