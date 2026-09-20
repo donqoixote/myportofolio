@@ -1,69 +1,135 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const stack = [
+  "Laravel",
+  "Next.js",
+  "TypeScript",
+  "Tailwind",
+  "React",
+  "Node.js",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="relative mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <section className="grid items-center gap-12 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="relative z-10">
+          <span className="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.25em] text-cyan-300">
+            Available for work
+          </span>
+
+          <h1 className="neon-title mt-6 text-4xl font-black leading-none text-white md:text-6xl">
+            Hi There! I&apos;m{" "}
+            <span className="text-cyan-300">Muhammad Shofiyulloh</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <h2 className="mt-5 max-w-xl text-2xl font-semibold leading-tight text-slate-100 md:text-4xl">
+            A <span className="text-cyan-300">FULLSTACK ENGINEER</span>. I HELP
+            COMPANIES BUILD AND <span className="text-cyan-300">SCALE</span>{" "}
+            THEIR PLATFORMS
+          </h2>
+
+          <p className="mt-6 max-w-xl text-base leading-8 text-slate-300 md:text-lg">
+            I design and develop intuitive digital experiences that combine
+            clean UI, smooth performance, and business-focused solutions for
+            modern brands.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/projects"
+              className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300"
+            >
+              Explore Projects
+            </Link>
+
+            <Link
+              href="/contact"
+              className="rounded-full border border-cyan-400/40 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:text-white"
+            >
+              Let&apos;s Talk
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-8 text-sm text-slate-300">
+            <div>
+              <p className="text-2xl font-bold text-white">2+</p>
+              <p>Years learning</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-white">8+</p>
+              <p>Projects</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-white">4</p>
+              <p>Certifications</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative z-10 flex justify-center md:justify-end">
+          <div className="hero-visual">
+            <div className="floating-window floating-window-left">
+              <div className="window-header">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="window-body">
+                <div className="mini-bar short" />
+                <div className="mini-bar" />
+                <div className="mini-bar short" />
+              </div>
+            </div>
+
+            <div className="floating-window floating-window-right">
+              <div className="window-header">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="window-body">
+                <div className="chart-grid">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </div>
+
+            <div className="hero-panel">
+              <div className="panel-glow" />
+              <div className="avatar-wrap">
+                <div className="avatar-head" />
+                <div className="avatar-body" />
+              </div>
+
+              <div className="laptop-screen">
+                <div className="screen-bar" />
+                <div className="screen-dots">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mt-20 rounded-3xl border border-cyan-500/20 bg-slate-900/40 p-6 backdrop-blur-sm md:p-8">
+        <div className="flex flex-wrap gap-3">
+          {stack.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-cyan-400/20 bg-cyan-500/5 px-4 py-2 text-sm text-slate-200 transition duration-300 hover:border-cyan-300 hover:text-cyan-200"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
